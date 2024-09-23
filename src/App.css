@@ -1,0 +1,28 @@
+/* App.css */
+
+/* Flex container to hold the sidebar and the main content */
+.app-container {
+    display: flex; /* This creates the horizontal layout */
+    flex-direction: row; /* Ensures the sidebar is placed next to the content */
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    box-sizing: border-box; /* Ensure padding is considered in the element's total width/height */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 200px; /* Fixed width for the sidebar */
+    background-color: #f0f0f0;
+    height: 100vh; /* Sidebar takes the full height of the viewport */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Content area styling */
+.content-container {
+    flex-grow: 1; /* Takes up the remaining width */
+    padding: 20px;
+    overflow-y: auto; /* Vertical scrolling if content overflows */
+    box-sizing: border-box;
+    background-color: #ffffff; /* Optional: Adds a background color to content */
+}
