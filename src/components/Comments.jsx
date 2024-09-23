@@ -4,17 +4,14 @@ import "./Comments.css"; // Optional CSS for styling
 function Comments({ data }) {
   return (
     <div>
-      <h2>Comments</h2>
-      <div className="comments-container">
+      <h2 className="card-mini">Comments</h2>
+      <ul className="card-button">
         {data.map((comment, index) => (
-          <div key={index} className="comment">
-            <p className="comment-content">
-              <strong>{comment.Comment}</strong>
-            </p>
-            <p className="comment-date">{comment.Date}</p>
-          </div>
+          <li key={index}>
+            {comment.Date}: {comment.Comment}
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 function Profile({ data }) {
   return (
-    <div>
+    <div className="card-mini">
       <h2>Profile</h2>
       <p>
         <strong>Username:</strong> {data.userName}

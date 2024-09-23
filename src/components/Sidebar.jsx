@@ -1,19 +1,25 @@
 import React from "react";
 
-function Sidebar({ setView }) {
+function Sidebar({ setView, name }) {
   return (
-    <div
-      style={{
-        width: "200px",
-        background: "#f0f0f0",
-        height: "100vh",
-        padding: "10px",
-      }}
-    >
-      <button onClick={() => setView("profile")}>Profile</button>
-      <button onClick={() => setView("search")}>Search History</button>
-      <button onClick={() => setView("chat")}>Chat</button>
-      <button onClick={() => setView("comments")}>Comments</button>
+    <div className="sidebar">
+      <img src="/logo.png" width={"100px"} />
+      <div className="brutalist-container">
+        <input value={name} className="brutalist-input" type="text" disabled />
+        <label className="brutalist-label">Tiktok User</label>
+      </div>
+      <button className="btn-dark" onClick={() => setView("profile")}>
+        Profile
+      </button>
+      <button className="btn-hollow" onClick={() => setView("search")}>
+        Search History
+      </button>
+      <button className="btn-dark" onClick={() => setView("chat")}>
+        Chat
+      </button>
+      <button className="btn-hollow" onClick={() => setView("comments")}>
+        Comments
+      </button>
     </div>
   );
 }
