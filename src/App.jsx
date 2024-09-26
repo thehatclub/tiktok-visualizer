@@ -47,6 +47,7 @@ function App() {
             {view === "chat" && (
               <Chat
                 data={jsonData["Direct Messages"]["Chat History"].ChatHistory}
+                userName={userName}
                 selectedChatUser={selectedChatUser}
                 setSelectedChatUser={setSelectedChatUser}
               />

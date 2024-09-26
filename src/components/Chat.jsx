@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./Chat.css"; // Make sure the CSS file is included
 
-function Chat({ data, selectedChatUser, setSelectedChatUser }) {
+function Chat({ data, userName, selectedChatUser, setSelectedChatUser }) {
   const [sortOrder, setSortOrder] = useState("newest"); // Default sorting order is "newest to oldest"
-  const currentUser = "tannersmiley2";
 
   // Helper function to extract just the username from the chat key
   const extractUsername = (chatKey) => {
@@ -72,7 +71,7 @@ function Chat({ data, selectedChatUser, setSelectedChatUser }) {
           <div
             key={i}
             className={`chat-bubble-container ${
-              message.From === currentUser ? "right" : "left"
+              message.From === userName ? "right" : "left"
             }`}
           >
             <div className="chat-info">
@@ -85,7 +84,9 @@ function Chat({ data, selectedChatUser, setSelectedChatUser }) {
           </div>
         ))}
       </div>
-      <h2 className="card-mini">End of Chat Log</h2>
+      <div>
+        <h2 className="card-mini">End of Chat Log</h2>
+      </div>
     </div>
   );
 }
